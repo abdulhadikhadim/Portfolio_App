@@ -1,0 +1,100 @@
+\documentclass[a4paper, 11pt]{article}          % Paper and font size
+\usepackage[english]{babel}                     % Language setting
+
+% Set margins
+\usepackage[top=2.5cm,bottom=2.5cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+% Load useful packages
+\usepackage{graphicx}                           % Graphics
+\usepackage{amsmath}                            % Math
+\usepackage{xcolor}                             % Link color
+\definecolor{custom-blue}{RGB}{0,99,166} 
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, allcolors=custom-blue}
+\usepackage[default]{sourcesanspro}             % Load font
+\usepackage[T1]{fontenc}                        % Special characters
+\usepackage{fancyhdr}                           % Load header, footer package
+
+\usepackage{lastpage}                           % Footer note
+\usepackage{lipsum}                             % For dummy text
+
+\pagestyle{myheadings}                          % Own header
+\pagestyle{fancy}                               % Own style
+\fancyhf{}                                      % Clear header, footer
+
+\setlength{\headheight}{30pt}                   % Set header hight
+\renewcommand{\headrulewidth}{0.5pt}            % Top line
+\renewcommand{\footrulewidth}{0.5pt}            % Bottom line
+  
+\fancyhead[L]{\includegraphics[width=3cm]{univienna-logo.eps}} % Header left
+\fancyhead[C]{}                                 % Header center
+\fancyhead[R]{University of Vienna}             % Header right
+%\fancyfoot[L]{\textcopyright Jamie Doe}         % Footer left
+\fancyfoot[C]{}                                 % Footer center
+\fancyfoot[R]{\thepage/\pageref{LastPage}}      % Footer right
+
+
+\newcommand{\studentone}{Student 1: last name, first name, matriculation number}
+\newcommand{\studenttwo}{Student 2: last name, first name, matriculation number}
+
+%%% Begin document %%%
+\begin{document}
+
+\begin{figure}                                  % Include Logo
+\flushleft
+\includegraphics[width=0.4\textwidth]{univienna-logo.eps}
+\end{figure}
+
+% Set title, author, date
+\title{052400-1 VU Information Management and \\Systems Engineering (2024W)\\[1em] { Milestone 1\\[1em] 
+\large(\textit{Please note: submission deadline: Tue 12.11.2024 13:00})}}
+\author{
+\Large{Group X}\\[1em]
+\studentone\ \\[1em]
+\studenttwo\ \\[1em]
+\large(\textit{Please note: sort by last name})\\[1em]
+}
+
+\date{\today{}, Vienna}
+
+\maketitle                                      % Include contents
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Milestone 1 }
+
+\section*{Team}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Conceptual Modeling -- Team}                           
+\subsubsection{Application Domain}                             
+\subsubsection{Logical Design -- ER Diagram}
+\subsubsection{Relational Modeling -- SQL CREATE Statements}
+
+\newpage
+
+\section*{Individual - \studentone}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 1: Use Case Definition and Design}
+\subsubsection{Textual Description}                             
+\subsubsection{Graphical Representation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 1: Reporting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 1: NoSQL Design}
+
+\newpage
+
+\section*{Individual - \studenttwo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 2: Use Case Definition and Design}
+\subsubsection{Textual Description}                             
+\subsubsection{Graphical Representation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 2: Reporting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Student 2: NoSQL Design}
+
+%%% End document %%%
+\end{document}
